@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Forest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #e0f7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌲 SVG Forest -->
+  <svg viewBox="0 0 800 500" width="100vw" height="auto" role="img" aria-labelledby="title desc"
+       xmlns="http://www.w3.org/2000/svg">
+    <title id="title">Illustrated forest scene</title>
+    <desc id="desc">Mountains behind a forest of pines and deciduous trees, with a sunrise and drifting clouds.</desc>
+
+    <defs>
+      <!-- Sky gradient -->
+      <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8fd3ff"/>
+        <stop offset="60%" stop-color="#cfefff"/>
+        <stop offset="100%" stop-color="#eaf7ff"/>
+      </linearGradient>
+
+      <!-- Sun -->
+      <radialGradient id="sunGrad" cx="50%" cy="35%" r="35%">
+        <stop offset="0%" stop-color="#fff7a3"/>
+        <stop offset="60%" stop-color="#ffd36e" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#ffb45c" stop-opacity="0.0"/>
+      </radialGradient>
+
+      <!-- Mountain gradient -->
+      <linearGradient id="mntGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#a9b8c4"/>
+        <stop offset="100%" stop-color="#6e8190"/>
+      </linearGradient>
+
+      <!-- Ground gradient -->
+      <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5fb56a"/>
+        <stop offset="100%" stop-color="#2f7c45"/>
+      </linearGradient>
+
+      <!-- Pine tree symbol -->
+      <symbol id="pine" viewBox="-25 0 50 120">
+        <rect x="-4" y="85" width="8" height="35" fill="#5b3a21"/>
+        <polygon points="0,0 25,35 -25,35" fill="#0f6a3a"/>
+        <polygon points="0,20 30,60 -30,60" fill="#147d45"/>
+        <polygon points="0,45 35,90 -35,90" fill="#1a8e50"/>
+      </symbol>
+
+      <!-- Deciduous tree symbol -->
+      <symbol id="oak" viewBox="-30 0 60 120">
+        <rect x="-5" y="85" width="10" height="35" fill="#5b3a21"/>
+        <circle cx="0" cy="55" r="30" fill="#2b8c4b"/>
+        <circle cx="-18" cy="48" r="18" fill="#2f9a54"/>
+        <circle cx="18" cy="48" r="18" fill="#3aa861"/>
+        <circle cx="0" cy="32" r="16" fill="#45b56d"/>
+      </symbol>
+
+      <!-- Cloud symbol -->
+      <symbol id="cloud" viewBox="0 0 160 70">
+        <g fill="#ffffff" opacity="0.9">
+          <circle cx="40" cy="40" r="24"/>
+          <circle cx="70" cy="30" r="30"/>
+          <circle cx="105" cy="42" r="22"/>
+          <rect x="28" y="40" width="92" height="22" rx="11" ry="11"/>
+        </g>
+      </symbol>
+    </defs>
+
+    <!-- Background sky -->
+    <rect width="800" height="500" fill="url(#skyGrad)"/>
+
+    <!-- Sun glow -->
+    <circle cx="620" cy="120" r="160" fill="url(#sunGrad)"/>
+
+    <!-- Mountains -->
+    <g opacity="0.9">
+      <polygon points="80,360 220,180 360,360" fill="url(#mntGrad)"/>
+      <polygon points="260,360 420,160 590,360" fill="url(#mntGrad)" opacity="0.95"/>
+      <polygon points="480,360 650,200 790,360" fill="url(#mntGrad)" opacity="0.9"/>
+    </g>
+
+    <!-- Distant tree line (silhouette) -->
+    <g opacity="0.35" fill="#145b36">
+      <polygon points="0,360 40,320 80,360 120,330 170,360 210,325 260,360 300,330 350,360 390,325 440,360 480,330 530,360 570,320 620,360 660,330 710,360 750,325 800,360"/>
+    </g>
+
+    <!-- Ground -->
+    <rect y="360" width="800" height="140" fill="url(#groundGrad)"/>
+
+    <!-- Foreground trees -->
+    <g transform="translate(0,0)">
+      <!-- Row 1 -->
+      <use href="#pine" x="70"  y="240" transform="scale(1.1)" />
+      <use href="#oak"  x="130" y="245" transform="scale(1.05)" />
+      <use href="#pine" x="200" y="235" transform="scale(1.2)" />
+      <use href="#oak"  x="260" y="250" transform="scale(0.95)" />
+      <use href="#pine" x="320" y="238" transform="scale(1.15)" />
+      <use href="#oak"  x="380" y="248" transform="scale(1.05)" />
+      <use href="#pine" x="450" y="236" transform="scale(1.25)" />
+      <use href="#oak"  x="510" y="250" transform="scale(1.0)" />
+      <use href="#pine" x="570" y="238" transform="scale(1.2)" />
+      <use href="#oak"  x="630" y="248" transform="scale(1.05)" />
+      <use href="#pine" x="700" y="236" transform="scale(1.25)" />
+
+      <!-- Row 2 (closer, larger) -->
+      <use href="#oak"  x="100" y="270" transform="scale(1.25)" />
+      <use href="#pine" x="170" y="265" transform="scale(1.35)" />
+      <use href="#oak"  x="240" y="272" transform="scale(1.3)" />
+      <use href="#pine" x="315" y="262" transform="scale(1.45)" />
+      <use href="#oak"  x="390" y="272" transform="scale(1.28)" />
+      <use href="#pine" x="465" y="262" transform="scale(1.5)" />
+      <use href="#oak"  x="540" y="272" transform="scale(1.3)" />
+      <use href="#pine" x="615" y="262" transform="scale(1.45)" />
+    </g>
+
+    <!-- Grass tufts -->
+    <g stroke="#1c6e3f" stroke-width="2" stroke-linecap="round">
+      <path d="M50 420 l0 -12 M60 422 l0 -10 M70 420 l0 -14"/>
+      <path d="M140 440 l0 -10 M150 442 l0 -12 M160 440 l0 -9"/>
+      <path d="M250 430 l0 -12 M260 432 l0 -10 M270 430 l0 -14"/>
+      <path d="M360 445 l0 -10 M370 447 l0 -12 M380 445 l0 -9"/>
+      <path d="M480 430 l0 -12 M490 432 l0 -10 M500 430 l0 -14"/>
+      <path d="M600 440 l0 -10 M610 442 l0 -12 M620 440 l0 -9"/>
+      <path d="M720 426 l0 -12 M730 428 l0 -10 M740 426 l0 -14"/>
+    </g>
+
+    <!-- Animated clouds -->
+    <g opacity="0.8">
+      <use href="#cloud" x="-160" y="70">
+        <animateTransform attributeName="transform" type="translate"
+                          from="-160 0" to="960 0" dur="35s" repeatCount="indefinite"/>
+      </use>
+      <use href="#cloud" x="-280" y="120" transform="scale(1.2)">
+        <animateTransform attributeName="transform" type="translate"
+                          from="-280 0" to="920 0" dur="50s" repeatCount="indefinite"/>
+      </use>
+    </g>
+  </svg>
+
+</body>
+</html>
