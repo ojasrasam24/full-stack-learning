@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: grey;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+  text-align: center;
+}
+
+header {
+  background-color: lightgrey;
+}
+
+main {
+  background-color: darkgrey;
+
+}
+
+section {
+  background-color: teal;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+}
+
+img{
+  width: 100%;
+}
+
+hr {
+  width: 80%;
+  margin: auto;
+}
