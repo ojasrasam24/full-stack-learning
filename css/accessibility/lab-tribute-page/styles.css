@@ -1,0 +1,27 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  background-color: aqua;
+  /* overflow: scroll; */
+  padding: 20px;
+}
+
+#image {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
