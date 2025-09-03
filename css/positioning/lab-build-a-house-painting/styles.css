@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#house {
+  /* box-sizing: content-box; */
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background-color: brown;
+  border: 5px solid black;
+}
+
+#house > div {
+  position: absolute;
+}
+
+#roof {
+  width: 100%;
+  height: 25%;
+  background-color: teal;
+  border: 5px solid black;
+}
+
+#chimney {
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  top: -100px;
+  left: 350px;
+  border: 5px solid black;
+}
+
+#window-1 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 5px solid black;
+  top: 150px;
+  left: 50px;
+}
+
+#window-2 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 5px solid black;
+  top: 150px;
+  right: 50px;
+}
+
+#door {
+  width: 100px;
+  height: 200px;
+  background-color: beige;
+  border: 5px solid black;
+  right: 37%;
+  bottom: 0;
+}
