@@ -1,0 +1,295 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px dotted grey; */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 30px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+}
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.grid {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.logo>img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+@media (max-width: 650px) {
+  .logo>img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+@media (max-width: 650px) {
+  nav {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav>ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 650px) {
+  nav>ul {
+    flex-direction: column;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Remove once started to customize */
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 50px;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 160px;
+  }
+}
+
+#hero>h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+#hero input[type="email"] {
+  width: 100%;
+  max-width: 275px;
+  padding: 5px;
+}
+
+#hero input[type="submit"] {
+  width: 100%;
+  max-width: 150px;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#features {
+  margin-top: 30px;
+}
+
+#features .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 125px;
+  color: darkorange;
+}
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  height: 125px;
+  padding: 5px;
+}
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works>iframe {
+  width: 100%;
+  max-width: 560px;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100%/3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+
+
+.product>.level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product>h2 {
+  margin-top: 15px;
+}
+
+.product>ol {
+  margin-top: 15px;
+}
+
+.product>ol>li {
+  padding: 5px 0;
+}
+
+.product>button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer>ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer>ul>li {
+  padding: 0 10px;
+}
+
+footer>span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+  margin-top: 5px;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
